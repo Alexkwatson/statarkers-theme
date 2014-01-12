@@ -156,12 +156,15 @@ LAYOUT STYLES
 /* =========================================
 MODULE STYLES
 ========================================= */
+
 .list-unstyled { padding-left: 0; list-style: none; }
 
 .nav { text-transform: uppercase; }
 .nav ul { text-align: center; margin-top: 1.8em; }
 .nav li { display: inline-block; margin-right: 1em; }
 .nav li:last-child { margin-right: 0; }
+.nav a { padding-bottom: 0.2em; }
+
 .header, .footer { color: rgb(255,255,255); }
 .header a, .footer a { text-decoration: none; }
 .logo,
@@ -176,6 +179,9 @@ MODULE STYLES
 .pagination { text-align: center; }
 .lead a,
 .main-content a { text-decoration: underline; }
+
+.articleList { padding-left: 0; list-style: none; }
+.articleList__item { margin-bottom: 3em; }
 .article__heading { margin-bottom: 0; }
 .article__date { margin-top: 0; color: rgb(153, 153, 153); }
 
@@ -185,8 +191,25 @@ STATE STYLES
 
 a, a:visited { color: rgb(50, 50, 50); }
 a:hover, a:active, a:focus { color: rgb(46, 204, 113); }
+
 .header a, .header a:visited { color: rgb(255,255,255); }
+.header a:hover, .header a:active, .header a:focus {
+  color: rgb(46, 204, 113);
+}
 .footer a, .footer a:visited { color: rgb(255,255,255); }
+.footer a:hover, .footer a:active, .footer a:focus {
+  color: rgb(46, 204, 113);
+}
+
+.nav a, .nav a:visited { color: rgb(255, 255, 255); }
+.nav a:hover, .nav a:active, .nav a:focus {
+  color: rgb(46, 204, 113);
+  border-bottom: 0.1em solid;
+}
+.nav a.current {
+  color: rgb(46, 204, 113);
+  border-bottom: 0.1em solid;
+}
 
 /* MUMMY BEAR - MEDIUM SIZE SCREENS
 ============================================================== */
