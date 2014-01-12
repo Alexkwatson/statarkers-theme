@@ -8,9 +8,9 @@
   {{ else }}
 
     {{ if first }}
-    <ol class="article__list">
+    <ol class="articleList">
     {{ endif }}
-      <li>
+      <li class="articleList__item">
         <article class="article">
           <h3><a href="{{ url }}">{{ title }}</a></h3>
           
@@ -26,6 +26,8 @@
           {{ endif }}
 
           {{ summary|smartypants|markdown }}
+
+          <p class="article__more"><a href="{{ url }}">Keep Reading &rarr;</a></p>
           
         </article>
       </li>
