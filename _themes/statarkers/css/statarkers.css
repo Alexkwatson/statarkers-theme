@@ -26,13 +26,13 @@ html  {
   background-color: rgb(50, 50, 50);
 }
 body {
-  color: rgb(50, 50, 50);
   line-height: 1.5;
+  font-weight: 400;
   font-size: 0.875em;
   font-style: normal;
-  font-weight: normal;
-  font-family: sans-serif;
+  color: rgb(50, 50, 50);
   background-color: rgb(255,255,255);
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 { font-size: 2.9em; line-height: 1.1; letter-spacing: 0.02em; }
@@ -42,9 +42,9 @@ h4,h5,h6 { font-size: 0.875em; }
 
 h1,h2,h3,h4,h5,h6 {
   color: rgb(50, 50, 50);
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 h1 { margin-top: 0; }
 h2 { margin-bottom: 0.5em; }
@@ -57,13 +57,13 @@ h3 + ol, h4 + ol, h5 + ol, h6 + ol { margin-top: 0; }
 
 a { text-decoration: none; }
 strong, b {
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-family: sans-serif;
 }
 em, i {
   font-style: italic;
-  font-weight: normal;
+  font-weight: 400;
   font-family: sans-serif;
 }
 code { background-color: rgb(238, 238, 238); font-size: 0.875em; }
@@ -78,9 +78,9 @@ blockquote {
   border-left: 0.3em solid rgb(238, 238, 238);
 }
 ul,ol { padding-left: 0; }
-dt { font-weight: bold; }
+dt { font-weight: 600; }
 dd { margin-bottom: 1em; }
-.lead { font-size: 1.2em; }
+.lead { font-size: 1.3em; }
 .text-left {text-align: left; }
 .text-center { text-align: center;}
 .text-right { text-align: right; }
@@ -105,10 +105,12 @@ dd { margin-bottom: 1em; }
 /* Tables */
 .table {
   width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   background-color: rgb(255,255,255);
   border: 0.1em solid #ddd;
 }
-.table  caption { font-weight: bold; }
+.table  caption { font-weight: 600; }
 .table thead {
   text-align: left;
   text-align: center;
@@ -118,7 +120,7 @@ dd { margin-bottom: 1em; }
 .table th, .table td { padding: 0.5em; border: 0.1em solid #ddd; }
 .table td { text-align: left; }
 
-.table th[scope="row"] { font-weight: normal; }
+.table th[scope="row"] { font-weight: 400; }
 .table th[scope="rowgroup"] { vertical-align: middle; }
 .table th[scope="row"],
 .table th[scope="rowgroup"] { text-align: left; }
@@ -159,7 +161,7 @@ MODULE STYLES
 
 .list-unstyled { padding-left: 0; list-style: none; }
 
-.nav { text-transform: uppercase; }
+.nav { text-transform: uppercase; font-size: 1.3em; font-weight: 300; }
 .nav ul { text-align: center; margin-top: 1.8em; }
 .nav li { display: inline-block; margin-right: 1em; }
 .nav li:last-child { margin-right: 0; }
@@ -168,11 +170,14 @@ MODULE STYLES
 .header, .footer { color: rgb(255,255,255); }
 .header a, .footer a { text-decoration: none; }
 .logo,
-.strap-line { text-align: center; margin: 0; }
+.strap-line {
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+}
 .logo { font-size: 2.2em; }
 .strap-line {
   font-size: 1.5em;
-  font-weight: normal;
   color: rgb(153, 153, 153);
 }
 .footer small { display: block; text-align: center; }
