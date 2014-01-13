@@ -268,3 +268,28 @@ a:hover, a:active, a:focus { color: rgb(46, 204, 113); }
   }
 
 }
+
+/* IE STYLES
+======================================================================
+- Until IE8 disappears this is where you can put your IE styles.
+- Usually the code from within media queries on a mobile first design.
+====================================================================== */
+
+.lt-ie9 body { font-size: 1em; }
+
+.lt-ie9 .nav ul { text-align: center; }
+.lt-ie9 .nav li {
+  margin-right: 1em;
+  display: inline-block;
+  border-color: transparent;
+}
+.lt-ie9 .nav li:last-child { margin-right: 0; }
+.lt-ie9 .nav .nav__button { display: none; }
+.js.lt-ie9 .nav__list { display: block; } /* show nav on medium+ screens */
+.lt-ie9 .nav a:hover,
+.lt-ie9 .nav a:active,
+.lt-ie9 .nav a:focus {
+  color: rgb(46, 204, 113);
+  background-color: transparent;
+}
+
