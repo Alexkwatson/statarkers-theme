@@ -13,6 +13,50 @@
       <li class="articleList__item">
         <article class="article">
           <h3><a href="{{ url }}">{{ title }}</a></h3>
+
+          {{ if main_img|not_empty }}
+          <div class="media">
+            <a class="pull-left" href="{url}">
+              <img src="{{ transform
+                src="{{ main_img }}"
+                width="180"
+                height="120"
+                action="smart"
+              }}" alt="" class="article__img media-object">
+            </a>
+            <div class="media-body">
+
+              {{ if author || date || categories_list || tags_list }}
+              <div class="article__meta">
+
+                {{ if author|not_empty }}
+                {{ member:profile member="{author}" }}
+                <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p>
+                {{ /member:profile }}
+                {{ endif }}
+
+                {{ if date }}
+                <p class="article__date">Posted on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
+                {{ endif }}
+                
+                {{ if categories_list && tags_list }}
+                <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
+                {{ endif }}
+
+                {{ if categories_list && !tags_list }}
+                <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
+                {{ endif }}
+
+                {{ if !categories_list && tags_list }}
+                <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
+                {{ endif }}
+
+              </div><!-- END .article__meta -->
+              {{ endif }}
+
+            </div><!-- .media-body -->
+          </div>
+          {{ else }}
           
           {{ if author || date || categories_list || tags_list }}
           <div class="article__meta">
@@ -42,13 +86,6 @@
           </div><!-- END .article__meta -->
           {{ endif }}
 
-          {{ if main_img|not_empty }}
-          <img src="{{ transform
-            src="{{ main_img }}"
-            width="180"
-            height="120"
-            action="smart"
-          }}" alt="" class="article__img">
           {{ endif }}
 
           {{ summary|smartypants|markdown }}
