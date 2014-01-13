@@ -31,7 +31,7 @@ body {
   font-size: 0.875em;
   font-style: normal;
   color: rgb(50, 50, 50);
-  background-color: rgb(255,255,255);
+  background-color: rgb(244, 244, 244);
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -213,8 +213,15 @@ MODULE STYLES
 .lead a,
 .main-content a { text-decoration: underline; }
 
+.media-body .article__author { margin-top: 0; }
+.article__author { margin-bottom: 0; }
 .articleList { padding-left: 0; list-style: none; }
-.articleList__item { margin-bottom: 3em; }
+.articleList__item {
+  padding: 1em;
+  margin-bottom: 3em;
+  border-radius: 0.3em;
+  background-color: rgb(255, 255, 255);
+}
 .article__heading { margin-bottom: 0; }
 .article__date { margin-top: 0; color: rgb(153, 153, 153); }
 .article-single .article__img {
@@ -322,4 +329,3 @@ a:hover, a:active, a:focus { color: rgb(46, 204, 113); }
   color: rgb(46, 204, 113);
   background-color: transparent;
 }
-
