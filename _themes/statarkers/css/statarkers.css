@@ -260,13 +260,10 @@ a:hover, a:active, a:focus { color: rgb(46, 204, 113); }
     border-color: transparent;
   }
   .nav li:last-child { margin-right: 0; }
-  .nav a { padding-bottom: 0.2em; }
-  .nav a.current { border-bottom: 0.1em solid; }
   .nav .nav__button { display: none; }
   .js .nav__list { display: block; } /* show nav on medium+ screens */
   .nav a:hover, .nav a:active, .nav a:focus {
     color: rgb(46, 204, 113);
-    border-bottom: 0.1em solid;
     background-color: transparent;
   }
 
