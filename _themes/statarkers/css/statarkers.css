@@ -55,7 +55,13 @@ h3 + p, h4 + p, h5 + p, h6 + p { margin-top: 0; }
 h3 + ul, h4 + ul, h5 + ul, h6 + ul,
 h3 + ol, h4 + ol, h5 + ol, h6 + ol { margin-top: 0; }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 strong, b {
   font-weight: 600;
   font-style: normal;
@@ -80,10 +86,6 @@ blockquote {
 ul,ol { padding-left: 0; }
 dt { font-weight: 600; }
 dd { margin-bottom: 1em; }
-.lead { font-size: 1.3em; }
-.text-left {text-align: left; }
-.text-center { text-align: center;}
-.text-right { text-align: right; }
 
 /* Forms */
 .form {
@@ -144,7 +146,7 @@ LAYOUT STYLES
   padding: 0 1.5em;
 }
 .header {
-  padding: 3em 0;
+  padding: 1.5em 0;
   background-color: rgb(50, 50, 50);
   border-bottom: 0.1em solid rgb(46, 204, 113);
 }
@@ -159,12 +161,34 @@ LAYOUT STYLES
 MODULE STYLES
 ========================================= */
 
+/* Helpers ============================== */
+
+.lead { font-size: 1.3em; }
+.text-left {text-align: left; }
+.text-center { text-align: center;}
+.text-right { text-align: right; }
 .list-unstyled { padding-left: 0; list-style: none; }
 .pull-right { float: right !important; }
 .pull-left { float: left !important; }
+.thumbnail {
+  display: block;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  border: 0.1em solid rgb(238, 238, 238);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* Clearfix */
+.cf:before,
+.cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+
+/* ============================== End Helpers */
 
 .nav {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 300;
   text-transform: uppercase;
   background-color: rgb(0, 0, 0);
@@ -186,9 +210,8 @@ MODULE STYLES
   text-transform: none;
 }
 .nav .nav__button {
-  padding: 0.8em;
+  padding: 0.5em;
   display: block;
-  font-size: 0.8em;
   text-align: right;
 }
 .nav .nav__button:hover,
@@ -203,9 +226,9 @@ MODULE STYLES
   font-weight: 300;
   text-align: center;
 }
-.logo { font-size: 2.2em; }
+.logo { font-size: 1.7em; }
 .strap-line {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: rgb(153, 153, 153);
 }
 .footer small { display: block; text-align: center; }
@@ -221,11 +244,13 @@ MODULE STYLES
   margin-bottom: 3em;
   border-radius: 0.3em;
   background-color: rgb(255, 255, 255);
+  border: 0.1em solid rgb(238, 238, 238);
 }
 .article__heading { margin-bottom: 0; }
 .article__date { margin-top: 0; color: rgb(153, 153, 153); }
 .article-single .article__img {
   padding: 0.5em;
+  border-radius: 0.3em;
   background-color: rgb(255, 255, 255);
   border: 0.1em solid rgb(238, 238, 238);
 }
@@ -278,11 +303,18 @@ a:hover, a:active, a:focus { color: rgb(46, 204, 113); }
 .js .nav__list { display: none; } /* hide nav on small screens */
 .arrow-up { display: none; }
 
+a.thumbnail:hover,
+a.thumbnail:active,
+a.thumbnail:focus { border-color: rgb(186, 186, 186); }
+
 /* MUMMY BEAR - MEDIUM SIZE SCREENS
 ============================================================== */
 @media screen and (min-width: 33em) {
 
   body { font-size: 1em; }
+  .logo { font-size: 2.2em; }
+  .strap-line { font-size: 1.5em; }
+  .header { padding: 3em 0; }
 
 }
 
@@ -329,3 +361,4 @@ a:hover, a:active, a:focus { color: rgb(46, 204, 113); }
   color: rgb(46, 204, 113);
   background-color: transparent;
 }
+

@@ -16,7 +16,7 @@
 
           {{ if main_img|not_empty }}
           <div class="media">
-            <a class="pull-left" href="{url}">
+            <a class="pull-left thumbnail" href="{url}">
               <img src="{{ transform
                 src="{{ main_img }}"
                 width="180"
@@ -90,7 +90,9 @@
 
           {{ summary|smartypants|markdown }}
 
-          <p class="article__more"><a href="{{ url }}">Keep Reading &rarr;</a></p>
+          <p class="article__more text-right">
+            <a href="{{ url }}">Keep Reading &rarr;</a>
+          </p>
           
         </article>
       </li>
