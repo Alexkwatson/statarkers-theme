@@ -322,7 +322,7 @@ a.thumbnail:focus { border-color: rgb(186, 186, 186); }
 ============================================================== */
 @media screen and (min-width: 62em) {
 
-  .nav ul { text-align: center; }
+  .nav ul { text-align: right; }
   .nav li {
     margin-right: 1em;
     display: inline-block;
@@ -361,4 +361,3 @@ a.thumbnail:focus { border-color: rgb(186, 186, 186); }
   color: rgb(46, 204, 113);
   background-color: transparent;
 }
-
